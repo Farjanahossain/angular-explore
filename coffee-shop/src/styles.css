@@ -16,15 +16,18 @@ a{
 .container {
     padding: 0 1rem;
 }
+body{
+    background-color: #333;
+}
 .btn {
     display: inline-block;
-    border: none;
+    border :none;
     background:#555;
-    color:#fff;
+    color: rgb(247, 239, 239);
     padding: 7px 20px;
     cursor: pointer;
 }
 
 .btn:hover {
-    background:#666;
+    background: #777;
 }

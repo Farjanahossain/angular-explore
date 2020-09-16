@@ -1,6 +1,8 @@
 import { Component, OnInit ,Input, EventEmitter, Output } from '@angular/core';
 import { Todo } from 'src/app/models/Todo';
 import { TodoService } from '../../services/todo.service';
+import { from } from 'rxjs';
+
 
 @Component({
   selector: 'app-todo-item',
@@ -8,12 +10,15 @@ import { TodoService } from '../../services/todo.service';
   styleUrls: ['./todo-item.component.css']
 })
 export class TodoItemComponent implements OnInit {
+  
   @Input() todo: Todo;
   @Output() deleteTodo: EventEmitter<Todo> = new EventEmitter();
 
   constructor(private todoservice:TodoService) { }
 
   ngOnInit() {
+   
+
   }
 // set dynamic classes
  setClasses() {
@@ -33,7 +38,15 @@ export class TodoItemComponent implements OnInit {
      console.log(todo));
  }
 
- onDelete(todo) {
-  this.deleteTodo.emit(todo);
+ onDelete(todo) { 
+this.deleteTodo.emit(todo);
+  
+  
+
   }
-}
+ 
+
+    // });
+    }
+  
+//}
