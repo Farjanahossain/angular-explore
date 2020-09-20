@@ -1,0 +1,19 @@
+import { Component, OnInit } from '@angular/core';
+//import { Hero } from '../hero';
+//import { HeroService } from '../hero.service';
+import { MessageService } from '../message.service'
+//import { from } from 'rxjs';
+@Component({
+  selector: 'app-messages',
+  templateUrl: './messages.component.html',
+  styleUrls: ['./messages.component.css']
+})
+export class MessagesComponent implements OnInit {
+
+
+  constructor(public messageService: MessageService) { }
+
+  ngOnInit(): void {
+  }
+
+}
